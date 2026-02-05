@@ -4,11 +4,12 @@ import Path1 from "../assets/Path1.png";
 import Path2 from "../assets/Path2.png";
 import Path3 from "../assets/Path3.png";
 import Path4 from "../assets/Path4.png";
+
 function FooterSection() {
     return (
         <>
-            <section className="bg-gray-50 py-20 text-center">
-                <h2 className="text-4xl md:text-5xl font-semibold text-gray-800 leading-tight mb-8">
+            <section className="bg-gray-50 py-12 md:py-20 text-center px-6">
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-gray-800 leading-tight mb-8">
                     Pellentesque suscipit <br /> fringilla libero eu.
                 </h2>
 
@@ -16,11 +17,12 @@ function FooterSection() {
                     Get a Demo <span>→</span>
                 </button>
             </section>
+
             <footer className="bg-[#263238] text-gray-300">
-                <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
-                    <div>
-                        <div className="flex items-center gap-2 mb-6">
-                            <img src={Logo} alt="" />
+                <div className="max-w-7xl mx-auto px-6 py-12 md:py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                    <div className="text-center sm:text-left">
+                        <div className="flex justify-center sm:justify-start mb-6">
+                            <img src={Logo} alt="Nexcent Logo" />
                         </div>
 
                         <p className="text-sm mb-6">
@@ -29,11 +31,11 @@ function FooterSection() {
                             All rights reserved
                         </p>
 
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 justify-center sm:justify-start">
                             {[Path1, Path2, Path3, Path4].map((icon, index) => (
                                 <div
                                     key={index}
-                                    className="w-8 h-8 rounded-full bg-gray-600 flex items-center justify-center hover:bg-green-600 transition cursor-pointer"
+                                    className="w-9 h-9 rounded-full bg-gray-600 flex items-center justify-center cursor-pointer transition-all duration-300 ease-out hover:bg-green-600 hover:-translate-y-1 hover:shadow-lg"
                                 >
                                     <img
                                         src={icon}
@@ -45,7 +47,7 @@ function FooterSection() {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="text-center sm:text-left">
                         <h4 className="text-white font-semibold mb-4">Company</h4>
                         <ul className="space-y-3 text-sm">
                             <li className="hover:text-white cursor-pointer">About us</li>
@@ -56,7 +58,7 @@ function FooterSection() {
                         </ul>
                     </div>
 
-                    <div>
+                    <div className="text-center sm:text-left">
                         <h4 className="text-white font-semibold mb-4">Support</h4>
                         <ul className="space-y-3 text-sm">
                             <li className="hover:text-white cursor-pointer">Help center</li>
@@ -67,17 +69,17 @@ function FooterSection() {
                         </ul>
                     </div>
 
-                    <div>
-                        <h4 className="text-white font-semibold mb-4">
-                            Stay up to date
-                        </h4>
-                        <div className="flex items-center bg-gray-600 rounded-md px-4 py-2">
+                    <div className="text-center sm:text-left">
+                        <h4 className="text-white font-semibold mb-4">Stay up to date</h4>
+                        <div className="flex items-center bg-gray-600 rounded-md px-4 py-2 max-w-xs mx-auto sm:mx-0">
                             <input
                                 type="email"
                                 placeholder="Your email address"
-                                className="bg-transparent outline-none text-sm text-white placeholder-gray-300 flex-1"
+                                className="bg-transparent outline-none text-sm text-white placeholder-gray-300 flex-1 min-w-0"
                             />
-                            <span className="text-white ml-2 cursor-pointer">➤</span>
+                            <span className="text-white ml-2 cursor-pointer transition-transform hover:translate-x-1">
+                                ➤
+                            </span>
                         </div>
                     </div>
                 </div>
