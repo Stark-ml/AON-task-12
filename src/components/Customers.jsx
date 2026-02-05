@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../assets/image-9.png";
-import logo from "../assets/frame-10.svg";
+import logo from "../assets/Frame-10.svg";
 
 function Customers() {
   return (
